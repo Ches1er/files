@@ -1,10 +1,11 @@
 <?php
 
 include FNPATH."dir_fns.php";
+define("USERSDIR","users_files");
 
 function action_new(){
     $name = $_POST["dir_name"];
-    $path = "users_files";
+    $path = USERSDIR;
     dirNew($name,$path);
     header("Location:/");
     return "";
@@ -12,7 +13,7 @@ function action_new(){
 
 function action_del(){
     $name = $_GET["name"];
-    $path = "users_files";
+    $path = USERSDIR;
     dirDel($name,$path);
     header("Location:/");
     return "";

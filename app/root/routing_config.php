@@ -3,6 +3,8 @@ return [
     ""=>"main@show",
     "/"=>"main@show",
     "newdir"=>"dir@new",
-    "del"=>"dir@del",
-    "showfiles"=>"main@show"
+    "deldir"=>"dir@del",
+    "showfiles"=>"main@show",
+    "addfile"=>"files@add",
+    "delfile"=>"files@del"
 ];

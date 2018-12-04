@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #ccc;
+    font-size: 1.1em;
+}
+
+.container{
+    width: 940px;
+    margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #fff;
+
+}
+header {
+
+}
+section{
+    display: inline-flex;
+    flex-flow: row nowrap;
+    width: 920px;
+    border: darkgrey solid 1px;
+    justify-content: center;
+}
+
+    /*Dirs*/
+
+.dirs{
+    width: 425px;
+    display: inline-flex;
+    flex-flow: column nowrap;
+    padding: 10px;
+}
+h4 {
+    font-size: 1.5em;
+    font-family: SignifyLite;
+    margin-bottom: 10px;
+}
+.info{
+    border: 1px solid #ececec;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.4);
+    padding: 5px;
+}
+form{
+    margin-top: 10px;
+    border: 1px solid #ececec;
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.4);
+    padding: 10px;
+}
+input[type="submit"]{
+    padding: 0 10px;
+    font-size: 0.8em;
+}
+.unit{
+    display: inline-flex;
+    flex-flow: row nowrap;
+    padding: 0 10px;
+}
+.unit div{
+    width: 335px;
+    height: 30px;
+    line-height: 30px;
+}
+.unit:nth-child(odd){
+    background-color: #F5F5F5;
+}
+.unit a{
+    width: 20px;
+    display: inline-block;
+    height: 30px;
+    text-decoration: none;
+    font-family: SignifyLite;
+    margin-left: 10px;
+    color: #7d7d7d;
+}
+.unit a:last-child{
+    color: red;
+}
+
+    /*Files*/
+
+.files div{
+    width: 365px;
+}
+
+    /*Font*/
+
+@font-face {
+    font-family: 'SignifyLite';
+    src: url('../font/signifylite-webfont.eot');
+    src: url('../font/signifylite-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../font/signifylite-webfont.woff') format('woff'),
+    url('../font/signifylite-webfont.ttf') format('truetype'),
+    url('../font/signifylite-webfont.svg#SignifyLite') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

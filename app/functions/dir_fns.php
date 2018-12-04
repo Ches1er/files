@@ -1,15 +1,5 @@
 <?php
 
-function dirOpen($path){
-    if (is_dir($path))opendir($path);
-    else return "";
-}
-
-function dirClose($path){
-    if (is_dir($path))closedir($path);
-    else return "";
-}
-
 function dirShow($path){
     return array_slice(scandir(DOCROOT.$path),2);
 }
