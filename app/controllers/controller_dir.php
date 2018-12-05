@@ -1,7 +1,6 @@
 <?php
 
 include FNPATH."dir_fns.php";
-define("USERSDIR","users_files");
 
 function action_new(){
     $name = $_POST["dir_name"];

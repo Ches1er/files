@@ -17,3 +17,21 @@ function action_del(){
     header("Location:/");
     return "";
 }
+
+function action_copy(){
+    $name = $_POST["file_name"];
+    $old_dir = $_POST["olddir_name"];
+    $new_dir = $_POST["newdir_name"];
+    filesCopy($name,$old_dir,$new_dir);
+    header("Location:/");
+    return "";
+}
+
+function action_remove(){
+    $name = $_POST["file_name"];
+    $old_dir = $_POST["olddir_name"];
+    $new_dir = $_POST["newdir_name"];
+    filesRemove($name,$old_dir,$new_dir);
+    header("Location:/");
+    return "";
+}
