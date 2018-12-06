@@ -4,7 +4,6 @@ include FNPATH."files_fns.php";
 $dirs = dirShow(USERSDIR);
 if ($dir_name)$files_arr = filesShow($dir_name); //$dir_name get through controller_main.php
 if ($find_file)$findfiles_arr = dirFind($find_file,USERSDIR);
-print_r($findfiles_arr);
 ?>
 
 <div class="dirs">
@@ -32,16 +31,22 @@ print_r($findfiles_arr);
     <input type="submit" value="Поиск">
 </form>
 
-    <? if (is_array($findfiles_arr)):?>
-    <h4>Find</h4>
+<? if (is_array($findfiles_arr)):?>
+    <h4>S</h4>
     <div class="info">
-        <?foreach ($findfiles_arr as $file):?>
-            <div class="unit files">
-                <div><?=$file?></div>
-            </div>
-        <? endforeach;?>
+    <?foreach ($findfiles_arr as $dir=>$file_arr):?>
+        <? if (count($file_arr)>0):?>
+            <ul>
+                <li class="find_files_dir"><?=$dir?>
+                <? foreach ($file_arr as $unit):?>
+                    <li class="find_files_files"><?=$unit?></li>
+                <? endforeach;?>
+                </li>
+            </ul>
+        <? endif;?>
+    <? endforeach;?>
     </div>
-    <?endif;?>
+<?endif;?>
 </div>
 
 

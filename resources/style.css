@@ -86,15 +86,27 @@ input[type="submit"]{
     width: 365px;
 }
 
+    /*Find files*/
+
+ul{
+    list-style: none;
+}
+.find_files_files{
+    padding-left: 15px;
+}
+.find_files_dir{
+    background-color: #eee;
+}
+
     /*Font*/
 
 @font-face {
     font-family: 'SignifyLite';
-    src: url('../font/signifylite-webfont.eot');
-    src: url('../font/signifylite-webfont.eot?#iefix') format('embedded-opentype'),
-    url('../font/signifylite-webfont.woff') format('woff'),
-    url('../font/signifylite-webfont.ttf') format('truetype'),
-    url('../font/signifylite-webfont.svg#SignifyLite') format('svg');
+    src: url('font/signifylite-webfont.eot');
+    src: url('font/signifylite-webfont.eot?#iefix') format('embedded-opentype'),
+    url('font/signifylite-webfont.woff') format('woff'),
+    url('font/signifylite-webfont.ttf') format('truetype'),
+    url('font/signifylite-webfont.svg#SignifyLite') format('svg');
     font-weight: normal;
     font-style: normal;
 }

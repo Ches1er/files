@@ -22,7 +22,7 @@ function dirFind($name,$path){
     $result = array();
     $dirs = dirShow($path);
     foreach ($dirs as $key=>$unit) {
-        if (is_dir($path."/".$unit)){
+        if (is_dir(DOCROOT.$path."/".$unit)){
             $result[$unit] = dirFind($name,$path."/".$unit);
         }
         else if(strpos($unit,$name)!==false)
@@ -32,4 +32,3 @@ function dirFind($name,$path){
     }
     return $result;
 }
-
